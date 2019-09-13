@@ -71,10 +71,6 @@ class DepthCompletionAgent(BaseAgent):
                 os.mkdir(self._config['output'])
 
             avg_loss, avg_detailed_loss = self.test()
-            print ("--- Evaluation Result ---")
-            for key in avg_detailed_loss:
-                print_msg = f'loss[{key}] : {avg_detailed_loss[key]}'
-                print (print_msg)
 
         elif self._config['mode'] == 'train':
             # load datasets

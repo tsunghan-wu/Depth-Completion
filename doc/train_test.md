@@ -63,8 +63,8 @@ train_config = {
 - test\_path : testing dataset path.
 - batch\_size : set as 1 for testing
 - param\_only : Set as True and pass `load\_model\_path`.
-- output : output directory saving `npy, mat` files.
+- output : output directory saving `.npy` files.
 
 #### Note 
 - You can download pre-trained model from [Google Drive](https://drive.google.com/drive/folders/1gmQS2mkIs9KO4m-eTI1zfTnXiqNQYbTp?usp=sharing) if needed.
-- Testing scripts only give you `.npy, .mat` files. If you want to evaluate the result or visualize them, please refer [visualize](./visualize.md)
+- Testing scripts only give you `.npy` files. If you want to evaluate the result or visualize them, please refer [visualize](./visualize.md)

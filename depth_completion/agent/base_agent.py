@@ -65,7 +65,5 @@ class BaseAgent(object):
         for key in save_items:  # go throungh different keys
             for tensor, fname in zip(save_items[key], fnames):    # batch items
                 abs_fname = os.path.join(self._config['output'], f'{fname}_{key}.npy')
-                abs_matname = os.path.join(self._config['output'], f'{fname}_{key}.mat')
                 img_np = tensor.squeeze().cpu().data.numpy()
                 np.save(abs_fname, img_np)
-                sio.savemat(abs_matname, {key:img_np})
