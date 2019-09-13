@@ -1,21 +1,6 @@
 import torch
 import torch.nn as nn
-from .torch_utils import img_grad, sobel_conv
 from depth_completion.utils import pytorch_ssim 
-
-def smooth_depth_loss(output, batch):
-    output_depth = output['output_depth']
-    gpu_id = output_depth.get_device()
-    loss = torch.tensor(0.).to(gpu_id)
-    _, _, w, h = output_depth.shape
-    _dir = [[0, 1], [0, -1], [1, 0], [-1, 0]]   # four adjacent pixels
-    for i in range(1, w-1):
-        for j in range(1, h-1):
-            for k in _dir:
-                dx, dy = k
-                tmp_loss = nn.MSELoss()(output_depth[:, 0, i+dx, j+dy] - output_depth[:, 0, i, j], torch.zeros_like(output_depth[:, 0, i, j]))
-                loss += tmp_loss
-    return loss
 
 def depth_L2_loss(output, batch):
     output_depth = output['output_depth']
@@ -26,12 +11,6 @@ def depth_L1_loss(output, batch):
     output_depth = output['output_depth']
     render_depth = batch['render_depth']
     return nn.L1Loss()(output_depth, render_depth)
-
-def img_grad_loss(output, batch):
-    output_depth, boundary = output['output_depth'], batch['depth_boundary']
-    depth_grad = sobel_conv(output_depth) 
-    loss = torch.mean(depth_grad * boundary)
-    return -loss
 
 def bc_L2_loss(output, batch):
     output_boundary = output['output_boundary']
