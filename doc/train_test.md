@@ -7,19 +7,18 @@ Before training/testing, we hope that you have read [data](data) and finish prep
 For training/testing depth completion :
 
 ```bash
-cd .. # go out Depth-Completion directory
-python3 -m Depth-Completion.main
+python3 -m depth_completion.main
 ```
 
 Note : modify `main.py` for different agent and configuration if needed.
 
 ## Agent
 
-For different agent, you can see [agent\_list](../agent/__init__.py) and then modify `main.py`.
+For different agent, you can see [agent\_list](../depth_completion/agent/__init__.py) and then modify `main.py`.
 
 ## Configuration
 
-For different configuration corresponding to the agent, you can see [configs](../config/) for example configurations. Here we will take one for example :
+For different configuration corresponding to the agent, you can see [configs](../depth_completion/config/) for example configurations. Here we will take one for example :
 
 ```
 train_config = {
@@ -46,17 +45,18 @@ train_config = {
 
 ### Common
 
-- model\_name : Models in [models](../models/model.py) you use for backbone model. (Second input for boundary consistency network)
+- model\_name : Models in [models](../depth_completion/models/model.py) you use for backbone model. (Second input for boundary consistency network)
 - in\_channel : input channel for the model
 - device\_ids : GPU-ids (support multi-gpu training)
 
 ### Training
 
-- training\_path, valid\_path : training and validation dataset root path. (Training list and Testing list are [here](../data/data_list))
-- loss\_func : dictionary for loss functions, each element is a tuple : (description, function\_name, weight). You can see [loss\_funcs](../utils/loss_func.py) for all loss functions.
+- training\_path, valid\_path : training and validation dataset root path. (Training list and Testing list are [here](../depth_completion/data/data_list))
+- loss\_func : dictionary for loss functions, each element is a tuple : (description, function\_name, weight). You can see [loss\_funcs](../depth_completion/utils/loss_func.py) for all loss functions.
 - param\_only : Set False as default. If set as True, you need to pass load\_model\_path for re-training.
 
-Note : Training log and model will be saved in [experiments](../experiments) directory.
+#### Note
+- Training log and model will be saved in [experiments](../depth_completion/experiments) directory.
 
 ### Testing
 
@@ -66,5 +66,5 @@ Note : Training log and model will be saved in [experiments](../experiments) dir
 - output : output directory saving `npy, mat` files.
 
 #### Note 
-- You can use [pre\_train\_model](../pre_train_model) if needed.
+- You can download pre-trained model from [Google Drive](https://drive.google.com/drive/folders/1gmQS2mkIs9KO4m-eTI1zfTnXiqNQYbTp?usp=sharing) if needed.
 - Testing scripts only give you `.npy, .mat` files. If you want to evaluate the result or visualize them, please refer [visualize](./visualize.md)
