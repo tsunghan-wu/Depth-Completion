@@ -9,8 +9,7 @@ from torch import optim
 from torch.utils.data import DataLoader
 
 # from my module
-from depth_completion.data import (DepthDataset, 
-                                    DepthInOnlyDataset)
+from depth_completion.data import DepthDataset
 from depth_completion.data import customed_collate_fn
 import depth_completion.utils.loss_func as loss_func
 from .base_agent import BaseAgent
