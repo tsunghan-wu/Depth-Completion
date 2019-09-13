@@ -1,6 +1,6 @@
 # Training / Testing
 
-Before training/testing, we hope that you have read [data](data) and finish preparing dataset.
+Before training/testing, we hope that you have read [data](./data.md) and finish preparing dataset.
 
 ## Quick Start
 

@@ -20,11 +20,11 @@ pip3 install -r requirements.txt
 
 ## Training / Testing
 
-Please see [train\_test](doc/training.md)
+Please see [train\_test](doc/train_test.md)
 
 ## Visualization / Evaluation
 
-Please see [vis\_eval](doc/inference.md)
+Please see [vis\_eval](doc/vis_eval.md)
 
 ## Authors
 
