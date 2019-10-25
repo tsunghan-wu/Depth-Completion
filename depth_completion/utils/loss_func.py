@@ -17,6 +17,12 @@ def bc_L2_loss(output, batch):
     depth_boundary = batch['depth_boundary']
     return nn.MSELoss()(output_boundary, depth_boundary)
 
+def bc_L1_loss(output, batch):
+    output_boundary = output['output_boundary']
+    depth_boundary = batch['depth_boundary']
+    return nn.L1Loss()(output_boundary, depth_boundary)
+
+
 def depth_rel(output, batch):
     output_depth = output['output_depth']
     render_depth = batch['render_depth']
