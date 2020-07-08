@@ -30,7 +30,7 @@ Please see [vis\_eval](doc/vis_eval.md)
 
 Yu-Kai Huang [kaikai4n](https://github.com/kaikai4n) r08922053@ntu.edu.tw
 
-Tsung-Han Wu [patrickwu2](https://github.com/patrickwu2) b05902013@ntu.edu.tw
+Tsung-Han Wu [tsunghan-mama](https://github.com/tsunghan-mama) b05902013@ntu.edu.tw
 
 Please cite our papers if you use this repo in your research:
 
@@ -45,5 +45,5 @@ Please cite our papers if you use this repo in your research:
 
 ## Acknowledgement
 
-This work was supported in part by the Ministry of Sci- ence and Technology, Taiwan, under Grant MOST 108-2634-F-002-004, FIH Mobile Limited, and Qualcomm Technologies, Inc., under Grant NAT-410477. We are grateful to the National Center for High-performance Computing.
+This work was supported in part by the Ministry of Science and Technology, Taiwan, under Grant MOST 108-2634-F-002-004, FIH Mobile Limited, and Qualcomm Technologies, Inc., under Grant NAT-410477. We are grateful to the National Center for High-performance Computing.
 
