@@ -30,7 +30,7 @@ Please see [vis\_eval](doc/vis_eval.md)
 
 Yu-Kai Huang [kaikai4n](https://github.com/kaikai4n) r08922053@ntu.edu.tw
 
-Tsung-Han Wu [tsunghan-mama](https://github.com/tsunghan-mama) b05902013@ntu.edu.tw
+Tsung-Han Wu [tsunghan-wu](https://github.com/tsunghan-wu) b05902013@ntu.edu.tw
 
 Please cite our papers if you use this repo in your research:
 
