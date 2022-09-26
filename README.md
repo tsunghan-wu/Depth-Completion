@@ -4,6 +4,8 @@ Official pytorch implementation of "Indoor Depth Completion with Boundary Consis
 
 In "Indoor Depth Completion with Boundary Consistency and Self-Attention. Huang et al. RLQ@ICCV 2019.", we design a neural network which utilizes self-attention mechanism and boundary consistency concept to improving completion depth maps. Our work enhances the depth map quality and structure, which outperforms previous state-of-the-art depth completion work on Matterport3D dataset.
 
+**`2022-09-26`**: We have released our training and testing dataset due to the [missing dataset issue](https://github.com/tsunghan-wu/Depth-Completion/issues/23). Detailed instructions for downloading the dataset are described in the [dataset section](https://github.com/tsunghan-wu/Depth-Completion/blob/master/doc/data.md)
+
 ![performance](doc/performance.png)
 
 Implementation details and experiment results can be seen in the paper.
